@@ -1,0 +1,7 @@
+#lang racket
+(define (build-list2 n f)
+
+(define (build-iter i n f)
+
+ (if (= n i) '()	(cons (f i) (build-iter (+ i 1) n f))))
+(build-iter 0 n f))
